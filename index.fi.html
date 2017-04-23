@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        
+        
+        <!-- Your app title -->
+        <title>Viikon kouluruoka</title>
+        <meta name="apple-mobile-web-app-title" content="Viikon kouluruoka" />
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+        
+        <!-- Path to Framework7 iOS CSS theme styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.0/css/framework7.ios.min.css" />
+        
+        <script>
+            var lang = "fi";
+        </script>
+    </head>
+    <body>
+        <!-- Status bar overlay for full screen mode (PhoneGap) -->
+        <div class="statusbar-overlay"></div>
+        
+        <!-- Views -->
+        <div class="views">
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="center sliding">Viikon kouluruoka</div>
+                        <div class="subnavbar sliding">
+                            <div class="buttons-row">
+                                <a href="#tab1" class="button active tab-link">Alakoulut</a>
+                                <a href="#tab2" class="button tab-link">Yläkoulut ja lukiot</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes -->
+                <div class="pages navbar-through">
+                    <div data-page="tabs-swipeable" class="page with-subnavbar">
+                        <div class="tabs-swipeable-wrap">
+                            <div class="tabs">
+                                <div id="tab1" class="page-content tab active">
+                                    <div class="content-block">
+                                        <div id="content-primaryschools"></div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="page-content tab">
+                                    <div class="content-block">
+                                        <div id="content-secondaryschools"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Path to Framework7 Library JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.0/js/framework7.min.js"></script>
+        <!-- Path to your app js -->
+        <script src="app.js"></script>
+        
+        <script>
+            primarySchools(lang);
+            secondarySchools(lang);
+        </script>
+    </body>
+</html>
