@@ -21,7 +21,7 @@ function primarySchools(lang) {
             document.getElementById("content-primaryschools").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "https://api.theel0ja.info/viikon-kouluruoka/html/turku_alakoulut?theme=framework7&lang=" + lang, true);
+    xhttp.open("GET", "https://viikon-kouluruoka.theel0ja.info/webapp?lang=" + lang, true);
     xhttp.send();
 }
 
@@ -35,6 +35,6 @@ function secondarySchools(lang) {
             document.getElementById("content-secondaryschools").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "https://api.theel0ja.info/viikon-kouluruoka/html/turku_ylakoulut?theme=framework7&lang=" + lang, true);
+    xhttp.open("GET", "https://viikon-kouluruoka.theel0ja.info/webapp?lang=" + lang, true);
     xhttp.send();
 }
